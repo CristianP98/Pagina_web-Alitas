@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+  
+:root {
+    --negro: #272725;
+    --rojOscuro: #D02317;
+    --blanco: #EBEBEB;
+    --hueso: #F1E3D8;
+    --rojoClaro: #AC231A;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    background-color: var(--negro);
+    font-family: 'Poppins', sans-serif;
+
+    /* luego borrar el color !importante */
+    color: var(--blanco);
+  }
+
+    /* -- header -- */
+    header {
+    background: url("/img/fondo-1.webp")no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+    /* --fin header-- */
+  
+/* -- main --*/
+
+/* -- section -- */
+
+section {
+    background-color: var(--blanco);
+    text-align: center;
+    height: 600px;
+}
+
+section h2 {
+    font-size: 50px;
+    color: var(--negro);
+    padding-top: 20px;
+}
+
+/* tarjetas-paises*/
+
+.tarjetas {
+    justify-content: center;
+    display: flex;
+    gap: 60px;
+    padding: 40px 0;
+  }
+  
+  .tarjetas .red {
+    background: url("/pagina/img/fondoAsia.jpeg")no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  
+  .tarjetas .blue {
+    background: url("/pagina/img/fondoAmerica.jpeg")no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+  }
+  
+  .tarjetas .green {
+    background: url("/pagina/img/fondoEuropa.jpeg")no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  
+  .tarjetas .tarjeta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    height: 300px;
+    width: 400px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: 400ms;
+  }
+  
+  .tarjetas .tarjeta a.tip {
+    font-size: 3em;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--blanco);
+    box-shadow: 2px 2px 9px var(--negro); 
+    padding: 5px 40px;
+}
+  
+  .tarjetas .tarjeta p.second-text {
+    font-size: .7em;
+  }
+  
+  .tarjetas .tarjeta:hover {
+    transform: scale(1.1, 1.1);
+  }
+  
+  .tarjetas:hover > .tarjeta:not(:hover) {
+    filter: blur(10px);
+    transform: scale(0.9, 0.9);
+  }
+
+/* fin tarjetas--paises-- */
+
+
+/* -- footer -- */
+
+/*--comentarios */
+
+footer {
+  justify-content: center;
+  text-align: center;
+}
+footer h3 {
+  color: var(--blanco);
+  padding: 2em;
+  font-size: 30px;
+}
+
+.comentarios span {
+  font-weight: bolder;
+  padding: 20px
+}
+.comentarios {
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+    margin-left: 10em;
+    padding-bottom: 60px;
+}
+.comentarios img {
+  width: 150px;
+  padding: 20px 0;
+  height: 150px;
+  border-radius: 100%;
+}
+.comentario1,
+.comentario2,
+.comentario3 {
+  border-radius: 20px;
+  width: 250px;
+  padding: 20px 80px;
+  background-color: #fff;
+  box-shadow: 10px 10px 20px #4a4e52;
+  margin-right: 200px;
+}
+
+.comentario1 img {
+  height: 120px;
+  width: 130px;
+}
+
+/* fin comentarios */
+
+.copy {
+  background-color: var(--blanco);
+  font-size:1em;
+  padding: 10px;
+  color: var(--negro);
+}
+
