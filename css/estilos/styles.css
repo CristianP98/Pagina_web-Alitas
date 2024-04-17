@@ -15,21 +15,98 @@
 body {
     background-color: var(--negro);
     font-family: 'Poppins', sans-serif;
-
-    /* luego borrar el color !importante */
-    color: var(--blanco);
   }
 
     /* -- header -- */
     header {
-    background: url("/img/fondo-1.webp")no-repeat;
+    background: url("/img/fondo1.jpg")no-repeat;
     background-size: cover;
     background-position: center;
     position: relative;
   }
+
+  /* --boton-de-inicio--boton-comentarios--*/
+  header h1 a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--blanco);
+    background-color: var(--negro);
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin: 20px;
+    font-size: 16px;
+  }
+  header h1 a:hover{
+    color: var(--negro);
+    background-color: var(--blanco);
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-4px);
+   }
+   
+   header h1 a:active {
+    box-shadow: none;
+    transform: translateY(0);
+    background-color: var(--hueso);
+    color: var(--negro);
+   }
+   /* --fin-boton-inicio--boton-comentarios-- */
+
+  /* inicio-texto */
+  .texto {
+    text-align: center;
+  }
+  .titulo {
+    font-size: 45px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--negro);
+    padding: 50px 0;
+  }
+  .descuento {
+    background-color: rgba(216, 216, 216, 0.6);
+    color: var(--rojOscuro);
+    font-size: 35px;
+    font-weight: 600;
+    padding: 15px 0;
+    margin: 20px 0;
+  }
+  /* --fin-texto-- */
+
+  /* --botones-inicio-- */
+  .botones {
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+  }
+  .botones a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--blanco);
+    background-color: var(--rojoClaro);
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin: 20px;
+    font-size: 16px;
+  }
+  .botones a:hover {
+    color: var(--blanco);
+    background-color: var(--negro);
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-4px);
+   }
+   .botones a:active {
+    box-shadow: none;
+    transform: translateY(0);
+    background-color: var(--hueso);
+    color: var(--negro);
+   }
+  /* --fin-botones-incio-- */
+
     /* --fin header-- */
-  
+
 /* -- main --*/
+
+
 
 /* -- section -- */
 
@@ -134,7 +211,7 @@ footer h3 {
   padding: 20px
 }
 .comentarios {
-  display: flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -172,4 +249,3 @@ footer h3 {
   padding: 10px;
   color: var(--negro);
 }
-
