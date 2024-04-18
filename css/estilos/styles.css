@@ -77,6 +77,7 @@ body {
     display: flex;
     justify-content: center;
     padding-top: 100px;
+    flex-wrap: wrap;
   }
   .botones a {
     display: inline-block;
@@ -106,12 +107,14 @@ body {
 
 /* -- main --*/
 main {
-  height: 500px;
+  height: 60vh;
+  margin: auto;
 }
 .caja1 {
   color: var(--blanco);
   display: flex;
   justify-content: center;
+  margin: 50px 0;
 }
 .texto1 {
   text-align: center;
@@ -127,26 +130,31 @@ main {
   font-weight:bolder;
   text-transform: uppercase;
   color: var(--blanco);
+  /* -- fin-texto --*/
+
+  /* --lista-main-- */
 }
 .lista ul {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   font-size: 18px;
   padding: 20px;
 }
 .lista li {
-  margin-right: 30px;
+  margin: 0 40px;
 }
-
-
+ /* --fin-lista-main-- */
 
 /* -- section -- */
 
 section {
     background-color: var(--blanco);
     text-align: center;
-    height: 600px;
-}
+    margin: auto;
+    height: auto;
+    overflow: hidden;
+} 
 
 section h2 {
     font-size: 50px;
@@ -154,24 +162,25 @@ section h2 {
     padding-top: 20px;
 }
 
-/* tarjetas-paises*/
+/* --tarjetas-paises--*/
 
 .tarjetas {
-    justify-content: center;
     display: flex;
-    gap: 60px;
+    justify-content:space-around;
+    flex-wrap: wrap;
     padding: 40px 0;
+    gap: 20px;
   }
   
   .tarjetas .red {
-    background: url("/pagina/img/fondoAsia.jpeg")no-repeat;
+    background: url("/img/fondoAsia.jpeg")no-repeat;
     background-size: cover;
     background-position: center;
     position: relative;
   }
   
   .tarjetas .blue {
-    background: url("/pagina/img/fondoAmerica.jpeg")no-repeat;
+    background: url("/img/fondoAmerica.jpeg")no-repeat;
     background-size: cover;
     background-position: center;
     position: relative;
@@ -179,7 +188,7 @@ section h2 {
   }
   
   .tarjetas .green {
-    background: url("/pagina/img/fondoEuropa.jpeg")no-repeat;
+    background: url("/img/fondoEuropa.jpeg")no-repeat;
     background-size: cover;
     background-position: center;
     position: relative;
@@ -199,7 +208,7 @@ section h2 {
     transition: 400ms;
   }
   
-  .tarjetas .tarjeta a.tip {
+  .tarjetas .tarjeta a {
     font-size: 3em;
     font-weight: 700;
     text-decoration: none;
@@ -207,8 +216,64 @@ section h2 {
     box-shadow: 2px 2px 9px var(--negro); 
     padding: 5px 40px;
 }
-  
-  .tarjetas .tarjeta p.second-text {
+/* --fin-tarjetas-paises--*/
+
+
+/* Responsive-grande-600px  */
+@media screen and (max-width: 600px) {
+  .tarjetas {
+    width: 100%;
+    margin-bottom: 20px;
+    
+  }
+  .tarjetas .tarjeta a {
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.tarjetas .red,
+.tarjetas .green,
+.tarjetas .blue {
+  width: 380px;
+  height: 200px;
+  margin-bottom: 10px;
+  margin-left:10px;
+  box-shadow: 2px 2px 4px var(--negro);
+}
+}
+/* Responsive--movil-pequeño */
+@media screen and (max-width: 400px) {
+  .tarjetas {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+.tarjetas .red,
+.tarjetas .green,
+.tarjetas .blue {
+  width: 350px;
+  height: 160px;
+  margin-bottom: 10px;
+  margin-left:3px;
+}
+}
+
+/* Responsive--movil--muy-pequeño */
+@media screen and (max-width: 370px) {
+.tarjetas .red,
+.tarjetas .green,
+.tarjetas .blue {
+  width: 300px;
+  height: 160px;
+  margin-bottom: 10px;
+  margin-left:2px;
+}
+}
+/* --fin-responsive-- */
+
+
+/* --inicio-animacion-- */
+.tarjetas .tarjeta p.second-text {
     font-size: .7em;
   }
   
@@ -220,8 +285,7 @@ section h2 {
     filter: blur(10px);
     transform: scale(0.9, 0.9);
   }
-
-/* fin tarjetas--paises-- */
+/*--fin-animacion-- */
 
 
 /* -- footer -- */
@@ -246,6 +310,7 @@ footer h3 {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     text-align: center;
     border-radius: 10px;
     margin-left: 10em;
