@@ -22,7 +22,8 @@ body {
   .formulario {
     display: flex;
     justify-content: center;
-    padding: 100px 0;
+    margin-top: 50px;
+    padding: 20px;
   }
 .card {
     background-color: #fff;
@@ -108,17 +109,23 @@ body {
   .form button:hover {
     background-color: #27408b;
   }
-  
+
   .inicio {
-    position: relative;
-    top: 470px;
-    right: 18%;
-    height: 60px;
+    display: flex;
+    justify-content: center;
   }
 
-  .inicio i {
+  .inicio a {
+    display: inline-block;
     color: var(--negro);
-    background-color: #fff;
+    background-color: var(--blanco);
     padding: 20px;
     border-radius: 50%;
+  }
+
+  .inicio a:hover {
+    background-color: var(--negro);
+    color: var(--blanco);
+    box-shadow: 2px 2px 20px var(--blanco);
+    transform: scale(1.1, 1.1);
   }
