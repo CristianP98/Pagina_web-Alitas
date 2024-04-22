@@ -17,6 +17,10 @@ body {
     font-family: 'Poppins', sans-serif;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
     /* -- header -- */
     header {
     background: url("/img/fondo1.jpg")no-repeat;
@@ -107,7 +111,7 @@ body {
 
 /* -- main --*/
 main {
-  height: 60vh;
+  height: auto;
   margin: auto;
 }
 .caja1 {
@@ -290,59 +294,62 @@ section h2 {
 
 /* -- footer -- */
 
-/*--comentarios */
-
 footer {
-  justify-content: center;
-  text-align: center;
-}
-footer h3 {
   color: var(--blanco);
-  padding: 2em;
-  font-size: 30px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
-.comentarios span {
-  font-weight: bolder;
-  padding: 20px
+footer h3 {
+  color:  var(--blanco);
+  font-size: 40px;
+  margin: 20px 0;
+  padding: 20px;
+
 }
+/* --inicio-tarjetas-- */
 .comentarios {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    text-align: center;
-    border-radius: 10px;
-    margin-left: 10em;
-    padding-bottom: 60px;
-}
-.comentarios img {
-  width: 150px;
-  padding: 20px 0;
-  height: 150px;
-  border-radius: 100%;
-}
-.comentario1,
-.comentario2,
-.comentario3 {
-  border-radius: 20px;
-  width: 250px;
-  padding: 20px 80px;
-  background-color: #fff;
-  box-shadow: 10px 10px 20px #4a4e52;
-  margin-right: 200px;
-}
-
-.comentario1 img {
-  height: 120px;
-  width: 130px;
-}
-
-/* fin comentarios */
-
-.copy {
-  background-color: var(--blanco);
-  font-size:1em;
-  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: auto;
+  width: auto;
+  flex-wrap: wrap;
+  padding: 40px 0;
+  gap: 20px;
   color: var(--negro);
+  margin: 20px 0;
 }
+
+.comentarios img {
+  object-fit: cover;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  box-shadow: 2px 4px 20px var(--negro);
+}
+/* --animacion-tarjetas-- */
+.comentario:hover {
+  transform: scale(1.1, 1.1);
+  box-shadow: 4px 4px 20px var(--blanco) ;
+}
+/* -- fin-animacion-tarjetas-- */
+.comentario {
+  background: var(--blanco);
+  padding: 20px;
+  width: 250px;
+  border-radius: 10px;
+}
+
+.comentario p {
+  padding: 20px 0;
+}
+/* --fin-tarjetas-- */
+.copy {
+  background-color: rgba(232, 232, 232, 0.8);
+  color: var(--negro);
+  padding: 10px;
+}
+
+/* -- fin-footer -- */
